@@ -3,7 +3,7 @@
 
 Gets the user directory where mods, modpacks, user settings and other data is stored.
 
-## [Parent Class](/API%20Reference/Game/)
+## [Parent Class](index.md)
 `Megafactory.Scripts.Game`
 
 ## Modifiers

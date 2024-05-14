@@ -67,5 +67,5 @@ Modpacks are simply collections of mods optimized for performance and compatibil
     C# has the `.cs` extension
 
 ## Creating your first mod
-[**Now you can move onto starting your first mod!**](/first-mod/)
+[**Now you can move onto starting your first mod!**](first-mod.md/)
 

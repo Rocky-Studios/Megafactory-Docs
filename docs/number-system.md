@@ -11,7 +11,7 @@ In C#, your common number types are `int`, `float`, `double`, and `decimal`. The
 
 These problems are all addressed and make coding in the style of this game a lot easier.
 
-The number class is documented [here](/API%20Reference/number), but some of its simple use is also explained here.
+The number class is documented [here](API Reference/number.md), but some of its simple use is also explained here.
 
 To create a new number, there are two ways:
 ## Generating from the constructor

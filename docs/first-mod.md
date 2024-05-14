@@ -62,7 +62,7 @@ Inside your start method, add this line of code:
 Logger.Log("Hello world!");
 ```
 !!! info "Documentation"
-    [Log](/API%20Reference/Debug/Logger/Log), [Logger](/API%20Reference/Debug/Logger)
+    [Logger](API Reference/Debug/Logger/index.md), [Log](API Reference/Debug/Logger/Log.md)
 
 Then open your game, make sure your mod is enabled and press Recompile. You should see some output at the bottom left that says "Hello world!". Try changing the text inside the double quotes, or try doing some math.
 !!! info "Tip"
@@ -87,7 +87,7 @@ Then open your game, make sure your mod is enabled and press Recompile. You shou
 Different shapes (gears, rods, etc.) can be made from different materials, which all have different properties. This section will teach you how to modify the game registry to add a new material, tweak its properties and add a recipe.
 
 !!! info "Documentation"
-    [Material](/API%20Reference/Material)
+    [Material](API Reference/material.md)
 
 First, you need to add a using statement for the material class:
 ```cs

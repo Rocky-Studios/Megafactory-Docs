@@ -3,7 +3,7 @@
 
 Logs a message
 
-## [Parent Class](/API%20Reference/Debug/Logger/)
+## [Parent Class](index.md)
 `Megafactory.Scripts.Debug.Logger`
 
 ## Modifiers

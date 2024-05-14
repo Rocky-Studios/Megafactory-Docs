@@ -10,4 +10,4 @@ Methods for logging errors and messages.
 `static`
 
 ## Methods
-[Log](/API%20Reference/Debug/Logger/Log)
+[Log](Log.md)

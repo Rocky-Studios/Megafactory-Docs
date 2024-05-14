@@ -10,4 +10,4 @@ Collection of utilities that don't fit anywhere else.
 None
 
 ## Methods
-[GetUserDirectory](/API%20Reference/Game/GetUserDirectory)
+[GetUserDirectory](GetUserDirectory.md)
