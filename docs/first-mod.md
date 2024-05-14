@@ -89,3 +89,11 @@ Different shapes (gears, rods, etc.) can be made from different materials, which
 !!! info "Documentation"
     [Material](/API%20Reference/Material)
 
+First, you need to add a using statement for the material class:
+```cs
+using Megafactory.Scripts.Material;
+```
+Create a new material and assign the values in the constructor.
+```cs
+Material myMaterial = new Material("My Material");
+```

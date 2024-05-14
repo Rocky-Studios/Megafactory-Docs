@@ -7,6 +7,11 @@ An object for creating a new material, eg. Iron, Copper, Hydrogen etc.
 `Megafactory.Scripts`
 
 ## Modifiers
-`abstract`
+None
 
 ## Methods
+
+## Constructor
+```cs
+new Material(string name)
+```
