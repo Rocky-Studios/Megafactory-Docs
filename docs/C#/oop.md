@@ -60,3 +60,151 @@ public int GetAge()
   return _age;
 }
 ```
+
+#### Why is this useful?
+This helps us prevent the problem we have before, assigning a negative number to an age. Encapsulation forces you to use the methods, which allows you to add checking before returning or assigning, like this:
+```cs
+public void SetAge(int age)
+{
+  if(age < 0) return;
+  _age = age;
+}
+```
+
+### Inheritance
+Let's say you have a class called `Animal`:
+```cs
+public class Animal
+{
+  public string Name;
+  private int _age;
+
+  public void SetAge(int age)
+  {
+    if(age < 0) return;
+    _age = age;
+  }
+  public int GetAge()
+  {
+    return _age;
+  }
+}
+```
+
+and you want another class called `Dog`. Dogs have some specific traits, for example a collar colour.
+```cs
+public class Dog
+{
+  public string Name;
+  public string CollarColour;
+  private int _age;
+
+  public void SetAge(int age)
+  {
+    if(age < 0) return;
+    _age = age;
+  }
+  public int GetAge()
+  {
+    return _age;
+  }
+}
+```
+Notice how the two classes have a lot of common code, like the name, age and the getter/setter methods. This is where we can make the `Dog` class inherit from the `Animal` class.
+
+The animal class will stay the same, but the `Dog` class will change drastically:
+```cs
+class Dog: Animal
+{
+  public string collarColour;
+}
+```
+The `:` character denotes inheritance; the `Dog` class is inheriting everything from the `Animal` class. This means we can use it like this:
+```cs
+// Some other code
+Dog liam = new Dog();
+
+liam.Name = "Liam";
+liam.CollarColour = "Blue";
+liam.SetAge(2);
+```
+#### Why is this useful?
+This stops you from having to rewrite code, and also, when you change one of the methods in the parent class, it will automatically change for all the child classes.
+!!! tip 
+    Classes can only inherit from one other class, but an infinite amount of interfaces.
+
+### Abstraction
+An abstract class (or interface) is a class that cannot be used directly. The animal class is a good example of this.
+```cs
+abstract class Animal
+{
+  //...
+}
+```
+This means that you cannot use the animal class, only its derivatives. You can't have an animal that is just *an animal*, it has to have a type, like a dog or a cat. Making the animal class abstract means the second line works but the first line throws an error.
+```cs
+//Cannot create an instance of the abstract class or interface 'Animal'
+Animal tom = new Animal();
+
+Dog tom = new Dog(); //Works
+```
+#### Why is this useful?
+If you want to create a class that essentially works as a 'template'.
+
+### Polymorphism
+Going back to the `Animal` and `Dog` example, let's say you know that a Dog can only be a maximum of 20 years old. You can't modify the `SetAge` method in the `Animal` class, because then all the animals would have a max age of 20.
+```cs
+public void SetAge(int age)
+{
+  //Can't do this
+  if(age < 0 || age > 20) return;
+  _age = age;
+}
+```
+So we have to `override` the SetAge method in the `Dog` class:
+```cs
+// In Dog class
+public override void SetAge(int age)
+{
+  if(age < 0 || age > 20) return;
+  _age = age;
+}
+```
+
+#### Why is this useful?
+Sometimes we will have a method that will have differences based on which objects inherit it, and it can be modified to fit those differences.
+
+## A fully object-oriented script
+Combining everything, we arrive at this script. Feel free to use it for reference.
+```cs title="Fully OOP-ified script"
+//                                      Abstraction
+public abstract class Animal
+{
+  public string Name;
+
+  //                                    Encapsulation
+  private int _age;
+
+  public void SetAge(int age)
+  {
+    if(age < 0) return;
+    _age = age;
+  }
+  public int GetAge()
+  {
+    return _age;
+  }
+}
+//                                      Inheritance
+class Dog: Animal
+{
+  public string collarColour;
+
+  //                                    Polymorphism
+  public override void SetAge(int age)
+  {
+    if(age < 0 || age > 20) return;
+    _age = age;
+  }
+}
+```
