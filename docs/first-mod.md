@@ -89,11 +89,27 @@ Different shapes (gears, rods, etc.) can be made from different materials, which
 !!! info "Documentation"
     [Material](API Reference/material.md)
 
-First, you need to add a using statement for the material class:
+First, you need to add a using statement for the material and registry classes:
 ```cs
 using Megafactory.Scripts.Material;
+using Megafactory.Scripts.Registry;
 ```
-Create a new material and assign the values in the constructor.
+Create a new material and assign the values in the constructor. Notice the long constructor for `Number`, which you can learn more about [here](number-system.md).
 ```cs
-Material myMaterial = new Material("My Material");
+//                                 Name           Density 
+Material uranium = new Material("Uranium", new Number(
+  "19",
+  measurementType = MeasurementType.Density,
+  numberUnit = NumberUnit.GramPerCubicCentimetre
+));
 ```
+Then add it to the registry, as well as a translation name ID
+```cs
+Registry.Add<Material>(uranium, "material.uranium.name");
+```
+And optionally, add a research, for which before it is hidden
+```cs
+Registry.Add<Material>(uranium, "material.uranium.name", Registry.Get<Research>("uranium-processing"));
+```
+!!! tip
+    It is recommended you familiarize yourself with the Number, Translation and Registry systems, as you will use them quite a lot
