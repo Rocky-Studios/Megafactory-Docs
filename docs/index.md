@@ -16,7 +16,7 @@ Mods are written in C#, and some prior coding experience is recommended, either 
 **This guide is made for Windows 10+ with <a href="https://visualstudio.microsoft.com/vs/community/" target="_blank">Visual Studio Community Edition</a> and <a href="https://blender.org" target="_blank">Blender</a>.**
 
 ## Publishing your mod
-If you're done with the first public release of your mod, you can upload it to [megafactory.rockystudios.net/mods](https://megafactory.rockystudios.netmods) so other people can download it from within the game.
+If you're done with the first public release of your mod, you can upload it to <a href="https://megafactory.rockystudios.net/mods" target="_blank">the official modding website</a> so other people can download it from within the game.
 Your mod might be rejected, and we will provide a good reason why. It willusually be rejected if it poses a security risk to users, and we will providea fix.
 <strong style="color: red;">DO NOT UPLOAD YOUR MOD ANYWHERE ELSE</strong>
 ## Best Practices
