@@ -30,5 +30,6 @@ markdown_extensions:
   - pymdownx.details
   - admonition
   - pymdownx.superfences
+  - tables
 extra_css:
   - stylesheets/extra.css
