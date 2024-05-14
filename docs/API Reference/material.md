@@ -10,4 +10,3 @@ An object for creating a new material, eg. Iron, Copper, Hydrogen etc.
 `abstract`
 
 ## Methods
-[Log](/API%20Reference/Debug/Logger/Log)
