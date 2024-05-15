@@ -87,7 +87,7 @@ Then open your game, make sure your mod is enabled and press Recompile. You shou
 Different shapes (gears, rods, etc.) can be made from different materials, which all have different properties. This section will teach you how to modify the game registry to add a new material, tweak its properties and add a recipe.
 
 !!! info "Documentation"
-    [Material](API Reference/material.md)
+    [Material](API Reference/material.md), [Registry](API Reference/Registry/index.md)
 
 First, you need to add a using statement for the material and registry classes:
 ```cs
@@ -96,7 +96,7 @@ using Megafactory.Scripts.Registry;
 ```
 Create a new material and assign the values in the constructor. Notice the long constructor for `Number`, which you can learn more about [here](number-system.md).
 ```cs
-//                                 Name           Density 
+//                              Name           Density 
 Material uranium = new Material("Uranium", new Number(
   "19",
   measurementType = MeasurementType.Density,

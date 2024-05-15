@@ -92,9 +92,11 @@ If you have two numbers, `numberA` and `numberB`, both of which are length, in n
 numberA + numberB;
 ```
 
-But what if they have different units? What if numberA is in millimetres and numberB is in centimeters? Well, there's no way to tell and this could get confusing quickly. So if you tried to do this with the new number system, you would get an error:
-!!! failure "Error"
-    Operand '+' is not supported between types of Number and Number.
+But what if they have different units? What if numberA is in millimetres and numberB is in centimeters? Well, there's no way to tell and this could get confusing quickly. So if you tried to do this with the new number system, it would work slightly differently. Instead of outputting a `float`, `int`, etc., it would output a new `Number`, whose unit is the first one in the expression. Eg. if you add 2cm + 2.5m, the output would be in cm, but if you added 2.5m + 2cm, the output would be in m. To get the desired output, you can just use `Number.Convert`:
+```cs
+//     5cm
+Number output = numA + numB;
+```
 
 Instead to add numbers, you need to do it like this:
 ```cs
@@ -133,6 +135,12 @@ Number.Multiply(numberA, numberB, NumberUnit.Metre);
 
 //              10cm     50m²     outputs: 5m³
 Number.Multiply(numberA, numberB, NumberUnit.Metre);
+
+//              0.5m²    5m       outputs: 10cm
+Number.Divide  (numberA, numberB, NumberUnit.Metre);
+
+//              5m³      10cm     outputs: 50m²
+Number.Divide  (numberA, numberB, NumberUnit.Metre);
 ```
 The general rule is, *does it make logical sense to do this?*
 
@@ -140,3 +148,5 @@ The general rule is, *does it make logical sense to do this?*
 Numbers in normal programming are good for just that, *normal programming*, but in specialised cases, you may find yourself having to change key features of something to better fit what you are doing. It is recommended that you use this system only where necessary.
 
 I that this system, which in my opinion is quite useful in certain fields of programming, should not be restricted to this game. That's why it's available online at its [Github page](https://github.com/Rocky-Studios/Number-System). <br>It is open source and free, so use it in your projects, modify it to your needs and contribute if you have an idea.
+
+The guide on this page is very brief and only covers the basics. The full documentation can also be found on that page.

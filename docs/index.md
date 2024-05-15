@@ -16,11 +16,10 @@ Mods are written in C#, and some prior coding experience is recommended, either 
 **This guide is made for Windows 10+ with <a href="https://visualstudio.microsoft.com/vs/community/" target="_blank">Visual Studio Community Edition</a> and <a href="https://blender.org" target="_blank">Blender</a>.**
 
 ## Publishing your mod
-If you're done with the first public release of your mod, you can upload it to <a href="https://megafactory.rockystudios.net/mods" target="_blank">the official modding website</a> so other people can download it from within the game.
-Your mod might be rejected, and we will provide a good reason why. It willusually be rejected if it poses a security risk to users, and we will providea fix.
+If you're done with the first public release of your mod, you can upload it to <a href="https://megafactory.rockystudios.net/mods" target="_blank">the official modding website</a> so other people can download it from within the game. Your mod might be rejected, and we will provide a good reason why. It will usually be rejected if it poses a security risk to users, and we will provide a fix.
 <strong style="color: red;">DO NOT UPLOAD YOUR MOD ANYWHERE ELSE</strong>
 ## Best Practices
-So, you're ready to make a mod. But before you start, it is recommended you have a readof this section, so that you can do things right from the start and not have to rewriteor redesign your mod later on.
+So, you're ready to make a mod. But before you start, it is recommended you have a readof this section, so that you can do things right from the start and not have to rewrite or redesign your mod later on.
 
 ### The file structure
 Obviously, you can't just put down files in the mod folder and expect things to show up in-game. First, you need to locate your mod folder. On Windows (which is intended for this guide), the folder is `"%LocalAppData%\Rocky Studios\Megafactory\mods"`. You can simply run `⊞+R` and paste this path. If this folder does not exist, just open the game once and it should generate it.
